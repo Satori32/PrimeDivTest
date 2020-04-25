@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <algorithm>
 
 
 template<class T>
@@ -28,12 +29,15 @@ public:
 					F = false;
 					break;
 				}
+				if (o * o >= Count) { break; }
 			}
 			if (F) {
 				Primes.push_back(Count);
 			}
 		}
 
+		std::sort(Primes.begin(), Primes.end());
+		
 		return true;
 	}
 

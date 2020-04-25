@@ -7,7 +7,7 @@ int main() {
 	PrimeDivTest<std::uintmax_t> P;
 
 	P.Search(0xffff);
-	P.Search(0xffff0);
+	P.Search(0xffffff);
 	for (auto& o : P) {
 		std::cout << o << ',';
 	}
