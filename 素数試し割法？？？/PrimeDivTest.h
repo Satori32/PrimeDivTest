@@ -21,6 +21,14 @@ public:
 		return Primes.size();
 	}
 
+	bool IsPrime(const T& In) {
+		Search(In);
+
+		auto it=std::find(Primes.begin(), Primes.end(), In);
+
+		return it != Primes.end() ? ((*it) == In) : false;
+	}
+
 	bool Search(const T& In) {
 		for (Count; Count <= In; Count++) {
 			bool F = true;
